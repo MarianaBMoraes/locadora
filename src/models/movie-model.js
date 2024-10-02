@@ -23,4 +23,4 @@ const movieSchema = new db.Schema({
 
 const Movie = db.model("Movie", movieSchema);
 
-export default User;
+export default Movie;

@@ -31,12 +31,15 @@ const userSchema = new db.Schema({
     required: true,
     default: "USU",
   },
-  phones: [string],
+  phones: [String],
   address: {
     type: Object,
     required: false,
   },
-  house_number
+  house_number: {
+    type: Number,
+    required: false,
+  },
 });
 
 userSchema.pre("save", async function () {
