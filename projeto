@@ -1,0 +1,29 @@
+User{
+name,
+birthday_date,
+email, 
+password,
+permission_type,
+phones,
+addres,
+house_number
+}
+
+movie{
+name,
+release_date,
+director,
+classification [Livre, Maior16, Maior18]
+}
+
+rented{
+rente_by,
+movie_rented
+rent_date,
+return_date
+}
+
+Adicionar middlewares:
+-check_role
+-check_token
+-via_cep
