@@ -19,10 +19,6 @@ const movieSchema = new db.Schema({
     required: true,
     default: "LIVRE",
   },
-  ageRequire: {
-    type: Number,
-    required: true,
-  },
 });
 
 const Movie = db.model("Movie", movieSchema);
