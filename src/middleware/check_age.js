@@ -22,7 +22,7 @@ const checkAge = async (req, res, next) => {
       return res
         .status(403)
         .send({
-          message: "Usuário menor, sem permissão para alugar esse filme!",
+          message: "Usuário menor de idade, sem permissão para alugar esse filme!",
         });
     }
 
