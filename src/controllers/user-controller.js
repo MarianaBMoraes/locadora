@@ -77,9 +77,7 @@ export const signup = async (req, res) => {
 
 export const login = async (req, res) => {
   try {
-    const user = await User.findOne({
-      email: req.body.email,
-    }).exec();
+    const user = await User.findOne({ email: req.body.email }).exec();
 
     //validando se existe o usuário cadastrado
     if (user && (await user.senhaCorreta(req.body.password))) {

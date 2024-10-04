@@ -2,13 +2,13 @@ import db from "../config/db.js";
 import bcrypt from "bcrypt";
 
 const userSchema = new db.Schema({
-  nome: {
+  name: {
     type: String,
     required: true,
   },
   birthday_date: {
     type: Date,
-    required: true,
+    required: false,
   },
   email: {
     type: String,
@@ -49,8 +49,10 @@ userSchema.pre("save", async function () {
   this.password = await bcrypt.hash(this.password, 10);
 });
 
+
 // Define um método para a classe
 userSchema.methods.senhaCorreta = async function (senha) {
+  console.log(this.password);
   return await bcrypt.compare(senha, this.password);
 };
 

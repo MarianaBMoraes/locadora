@@ -1,4 +1,4 @@
-User{
+/* User{
 name,
 birthday_date,
 email, 
@@ -107,3 +107,4 @@ const checkAge = async (req, res, next) => {
 };
 
 export default checkAge;
+*/

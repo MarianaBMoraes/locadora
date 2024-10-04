@@ -15,7 +15,7 @@ const movieSchema = new db.Schema({
   },
   classification: {
     type: String,
-    enum: ["LIVRE", "MAIOR16", "MAIOR18"],
+    enum: ["LIVRE", "MAIOR14", "MAIOR16", "MAIOR18"],
     required: true,
     default: "LIVRE",
   },
